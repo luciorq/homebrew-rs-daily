@@ -12,8 +12,9 @@ function build_formulas () {
   rs_daily_url=$(builtin echo "${json_var}" | "${jq_bin}" '.products.electron.platforms.macos.link | values' | sed 's|\"||g');
   rs_daily_hash=$(builtin echo "${json_var}" | "${jq_bin}" '.products.electron.platforms.macos.sha256 | values' | sed 's|\"||g');
   rs_version=$(builtin echo "${json_var}" | "${jq_bin}" '.products.electron.platforms.macos.version | values' | sed 's|\"||g');
+  mkdir -p Casks
   cat "${template_path}" \
     | sed "s|<<<RS_VERSION>>>|${rs_version}|g" \
     | sed "s|<<<RS_URL>>>|${rs_daily_url}|g" \
-    | sed "s|<<<RS_SHA>>>|${rs_daily_hash}|g" > "${formula_name}.rb"
+    | sed "s|<<<RS_SHA>>>|${rs_daily_hash}|g" > "Casks/${formula_name}.rb"
 }
