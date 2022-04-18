@@ -17,4 +17,5 @@ function build_formulas () {
     | sed "s|<<<RS_VERSION>>>|${rs_version}|g" \
     | sed "s|<<<RS_URL>>>|${rs_daily_url}|g" \
     | sed "s|<<<RS_SHA>>>|${rs_daily_hash}|g" > "Casks/${formula_name}.rb"
+  builtin echo -ne "${rs_version}";
 }
