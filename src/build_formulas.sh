@@ -8,10 +8,10 @@ function build_formulas () {
   local template_path formula_name;
   formula_name='rstudio-daily-electron';
   template_path="templates/${formula_name}.rb";
-  jq_bin="$(builtin command -p which 'jq')";
-  sed_bin="$(builtin command -p which 'sed')";
-  cat_bin="$(builtin command -p which 'cat')";
-  mkdir_bin="$(builtin command -p which 'mkdir')";
+  jq_bin="$(builtin command which 'jq')";
+  sed_bin="$(builtin command which 'sed')";
+  cat_bin="$(builtin command which 'cat')";
+  mkdir_bin="$(builtin command which 'mkdir')";
   json_var="$(
     curl -L -s -S -f https://dailies.rstudio.com/rstudio/latest/index.json
   )";
