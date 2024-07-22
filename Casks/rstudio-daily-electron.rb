@@ -11,8 +11,8 @@ cask "rstudio-daily-electron" do
     "homebrew/cask-versions/rstudio-daily",
     "homebrew/cask-versions/rstudio@preview",
     "homebrew/cask-versions/rstudio@daily",
-    "rstudio"
-    "rstudio@daily"
+    "rstudio",
+    "rstudio@daily",
     "rstudio@preview"
   ]
 
