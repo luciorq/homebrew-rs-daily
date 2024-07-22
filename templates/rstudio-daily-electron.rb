@@ -9,7 +9,11 @@ cask "rstudio-daily-electron" do
   conflicts_with cask: [
     "homebrew/cask-versions/rstudio-preview",
     "homebrew/cask-versions/rstudio-daily",
+    "homebrew/cask-versions/rstudio@preview",
+    "homebrew/cask-versions/rstudio@daily",
     "rstudio"
+    "rstudio@daily"
+    "rstudio@preview"
   ]
 
   depends_on macos: ">= :high_sierra"
