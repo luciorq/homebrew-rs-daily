@@ -12,23 +12,24 @@ function build_formulas () {
   sed_bin="$(builtin command which 'sed')";
   cat_bin="$(builtin command which 'cat')";
   mkdir_bin="$(builtin command which 'mkdir')";
-  json_var="$(
+
+  json_var=$(
     curl -L -s -S -f https://dailies.rstudio.com/rstudio/latest/index.json
-  )";
+  );
   rs_daily_url=$(
-    builtin echo ${json_var} \
+    \builtin echo "${json_var}" \
       | "${sed_bin}" 's|, }| }|g' \
       | "${jq_bin}" '.products.electron.platforms.macos.link | values' \
       | "${sed_bin}" 's|\"||g'
   );
   rs_daily_hash=$(
-    builtin echo ${json_var} \
+    builtin echo "${json_var}" \
       | "${sed_bin}" 's|, }| }|g' \
       | "${jq_bin}" '.products.electron.platforms.macos.sha256 | values' \
       | "${sed_bin}" 's|\"||g'
   );
   rs_version=$(
-    builtin echo ${json_var} \
+    builtin echo "${json_var}" \
       | "${sed_bin}" 's|, }| }|g' \
       | "${jq_bin}" '.products.electron.platforms.macos.version | values' \
       | "${sed_bin}" 's|\"||g'
