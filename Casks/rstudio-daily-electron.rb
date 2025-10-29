@@ -1,8 +1,8 @@
 cask "rstudio-daily-electron" do
-  version "2025.08.0+351"
-  sha256 "36f8a618ce6eb54324b73d366142b641556c57076dd274138d98c6f70f734d83"
+  version "2025.12.0-daily+284"
+  sha256 "bf7aa602f8a189da9ebb528e5cbf6494476417f18d0c4df5c61199d386df197f"
 
-  url "https://s3.amazonaws.com/rstudio-ide-build/electron/macos/RStudio-2025.08.0-351.dmg"
+  url "https://s3.amazonaws.com/rstudio-ide-build/electron/macos/RStudio-2025.12.0-daily-284.dmg"
   name "RStudio"
   homepage "https://dailies.rstudio.com/rstudio/spotted-wakerobin/electron/macos/"
 
