@@ -16,8 +16,6 @@ cask "rstudio-daily-electron" do
     "rstudio@preview"
   ]
 
-  depends_on macos: ">= :high_sierra"
-
   app "RStudio.app"
 
   zap trash: "~/.rstudio-desktop"
